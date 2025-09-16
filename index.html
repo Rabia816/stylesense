@@ -7,23 +7,36 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Style Sense</h1>
-        <p>Your AI fashion advisor – Look smart, feel confident!</p>
-    </header>
+    <nav>
+        <div class="logo">Style Sense</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#outfits">Outfit Generator</a></li>
+            <li><a href="#chatbot">Chatbot</a></li>
+        </ul>
+    </nav>
 
-    <section id="outfit-generator">
+    <section id="home">
+        <h1>Welcome to Style Sense</h1>
+        <p>Your smart fashion advisor powered by AI-inspired design!</p>
+        <button onclick="document.getElementById('outfits').scrollIntoView({ behavior: 'smooth' });">Explore Outfits</button>
+    </section>
+
+    <section id="outfits">
         <h2>Outfit Generator</h2>
-        <input type="text" id="description" placeholder="Describe your event or mood..." />
+        <input type="text" id="description" placeholder="Describe your mood or occasion..." />
         <button onclick="generateOutfit()">Get Outfit</button>
-        <div id="result"></div>
+        <div id="result" class="cards-container"></div>
+        <h3>Upload Your Photo</h3>
+        <input type="file" id="upload-photo" accept="image/*" onchange="previewPhoto(event)" />
+        <div id="photo-preview"></div>
     </section>
 
     <section id="chatbot">
         <h2>Chat with Style Sense</h2>
+        <div id="chat-output"></div>
         <input type="text" id="chat-input" placeholder="Ask for fashion tips..." />
         <button onclick="sendMessage()">Send</button>
-        <div id="chat-output"></div>
     </section>
 
     <footer>
