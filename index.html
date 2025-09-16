@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Style Sense</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Style Sense</h1>
+        <p>Your AI fashion advisor – Look smart, feel confident!</p>
+    </header>
+
+    <section id="outfit-generator">
+        <h2>Outfit Generator</h2>
+        <input type="text" id="description" placeholder="Describe your event or mood..." />
+        <button onclick="generateOutfit()">Get Outfit</button>
+        <div id="result"></div>
+    </section>
+
+    <section id="chatbot">
+        <h2>Chat with Style Sense</h2>
+        <input type="text" id="chat-input" placeholder="Ask for fashion tips..." />
+        <button onclick="sendMessage()">Send</button>
+        <div id="chat-output"></div>
+    </section>
+
+    <footer>
+        <p>Style smarter. Look better. Feel confident.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
